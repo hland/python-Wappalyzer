@@ -262,6 +262,25 @@ class Wappalyzer(object):
         detected_apps |= self._get_implied_apps(detected_apps)
 
         return detected_apps
+    
+    def analyze_with_icons(self, webpage):
+        """
+        Return a list of dicts with application and icon that can be detected on the web page.
+        """
+        detected_apps = set()
+        detected_apps_with_icons = []
+
+        for app_name, app in self.apps.items():
+            if self._has_app(app, webpage):
+                detected_apps.add(app_name)
+
+        detected_apps |= self._get_implied_apps(detected_apps)
+
+        for app in detected_apps:
+            detected_apps_with_icons.append({"technology": app, "icon": self.apps.get(app).get("icon")})
+
+        return detected_apps_with_icons
+
 
     def analyze_with_categories(self, webpage):
         """
