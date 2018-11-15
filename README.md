@@ -1,15 +1,10 @@
 python-Wappalyzer
 =================
 
-[![Build Status](https://travis-ci.org/chorsley/python-Wappalyzer.svg?branch=master)](https://travis-ci.org/chorsley/python-Wappalyzer)
-[![PyPI version](https://badge.fury.io/py/python-Wappalyzer.svg)](https://badge.fury.io/py/python-Wappalyzer)
-[![Coverage Status](https://coveralls.io/repos/github/chorsley/python-Wappalyzer/badge.svg?branch=master)](https://coveralls.io/github/chorsley/python-Wappalyzer?branch=master)
+Python3 version of https://github.com/chorsley/python-Wappalyzer. 
+Uses the `apps.json` file from https://github.com/AliasIO/Wappalyzer to look analyze websites.
 
-
-Python driver for [Wappalyzer][], a web application
-detection utility.
-
-    $ pip install python-Wappalyzer
+    $ pip3 install git+ssh://git@github.com:hland/python-Wappalyzer.git
 
     >>> from Wappalyzer import Wappalyzer, WebPage
     >>> wappalyzer = Wappalyzer.latest()
