@@ -3,9 +3,7 @@ import re
 import warnings
 import logging
 import pkg_resources
-
 import requests
-
 from bs4 import BeautifulSoup
 
 logger = logging.getLogger(name=__name__)

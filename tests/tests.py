@@ -1,7 +1,5 @@
 from unittest import TestCase
-
 from httpretty import HTTPretty, httprettified
-
 from Wappalyzer import WebPage, Wappalyzer
 
 
